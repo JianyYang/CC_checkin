@@ -1,0 +1,14 @@
+name: test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: yanglbme/cordcloud-action@main
+        with:
+          email: ${{ secrets.EMAIL }}
+          passwd: ${{ secrets.PASSWORD }}
+          host: cordcloud.one,cordcloud.us,cordcloud.biz,c-cloud.xyz
