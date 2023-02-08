@@ -3,7 +3,6 @@ name: auto_CC_checkin
 on:
   schedule:
     - cron: '30 16 * * *'
-  workflow_dispatch:
 
 jobs:
   checkin:
