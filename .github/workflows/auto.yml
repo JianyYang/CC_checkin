@@ -1,0 +1,16 @@
+name: auto_CC_checkin
+
+on:
+  schedule:
+    - cron: '30 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: yanglbme/cordcloud-action@main
+        with:
+          email: ${{ secrets.EMAIL }}
+          passwd: ${{ secrets.PASSWORD }}
+          host: cordcloud.one,cordcloud.us,cordcloud.biz,c-cloud.xyz
